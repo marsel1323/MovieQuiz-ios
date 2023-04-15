@@ -1,15 +1,11 @@
 import UIKit
 
-
-
-// для состояния "Вопрос задан"
 struct QuizStepViewModel {
     let image: UIImage
     let question: String
     let questionNumber: String
 }
 
-// для состояния "Результат квиза"
 struct QuizResultsViewModel {
     let title: String
     let text: String
@@ -91,9 +87,9 @@ final class MovieQuizViewController: UIViewController {
     
     private var correctAnswers: Int = 0
         
-    @IBOutlet private var imageView: UIImageView!
-    @IBOutlet private var textLabel: UILabel!
-    @IBOutlet private var counterLabel: UILabel!
+    @IBOutlet private weak var imageView: UIImageView!
+    @IBOutlet private weak var textLabel: UILabel!
+    @IBOutlet private weak var counterLabel: UILabel!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -131,9 +127,10 @@ final class MovieQuizViewController: UIViewController {
         
         let action = UIAlertAction(
             title: result.buttonText,
-            style: .default) { _ in
-                self.currentQuestionIndex = 0
+            style: .default) { [weak self]_ in
+                guard let self = self else { return }
                 
+                self.currentQuestionIndex = 0
                 self.correctAnswers = 0
                 
                 let firstQuestion = self.questions[self.currentQuestionIndex]

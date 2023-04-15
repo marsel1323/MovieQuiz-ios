@@ -40,7 +40,7 @@
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" text="1/10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fuo-Rk-hcL" userLabel="Index Label">
                                                 <rect key="frame" x="338" y="0.0" width="36" height="23.5"/>
                                                 <fontDescription key="fontDescription" name="YSDisplay-Medium" family="YS Display" pointSize="20"/>
-                                                <nil key="textColor"/>
+                                                <color key="textColor" name="YP White"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                         </subviews>
@@ -51,6 +51,11 @@
                                         <constraints>
                                             <constraint firstAttribute="width" secondItem="MAm-JY-94V" secondAttribute="height" multiplier="2:3" id="ioH-iY-dvA"/>
                                         </constraints>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                <integer key="value" value="20"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
                                     </imageView>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="W86-YR-9Ae">
                                         <rect key="frame" x="0.0" y="624.5" width="374" height="89.5"/>
@@ -121,7 +126,6 @@
                         <constraints>
                             <constraint firstItem="iBo-mE-JOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7uK-ID-1bf"/>
                             <constraint firstItem="iBo-mE-JOl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ASp-QS-K5p"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="iBo-mE-JOl" secondAttribute="bottom" constant="10" id="PoZ-UE-7Q2"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="iBo-mE-JOl" secondAttribute="trailing" constant="20" id="xWB-Wg-ka1"/>
                         </constraints>
                     </view>
