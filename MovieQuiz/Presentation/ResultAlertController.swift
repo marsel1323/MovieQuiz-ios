@@ -5,7 +5,6 @@
 //  Created by Марсель on 18.04.2023.
 //
 
-import Foundation
 import UIKit
 
 final class ResultAlertController: UIAlertController {
