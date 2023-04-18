@@ -7,8 +7,9 @@
 
 import Foundation
 
-class QuestionFactory: QuestionFactoryProtocol {
+final class QuestionFactory: QuestionFactoryProtocol {
     weak var delegate: QuestionFactoryDelegate?
+    private var shownQuestionsIndices: Set<Int> = []
     
     init(delegate: QuestionFactoryDelegate) {
         self.delegate = delegate
@@ -78,11 +79,21 @@ class QuestionFactory: QuestionFactoryProtocol {
     ]
     
     func requestNextQuestion() {
-        guard let index = (0..<questions.count).randomElement() else {
+        let availableIndices = (0..<questions.count).filter { !shownQuestionsIndices.contains($0) }
+        
+        if availableIndices.isEmpty {
+            shownQuestionsIndices.removeAll()
+            requestNextQuestion()
+            return
+        }
+        
+        guard let index = availableIndices.randomElement() else {
             delegate?.didReceiveNextQuestion(question: nil)
             return
         }
         
+        shownQuestionsIndices.insert(index)
+
         let question = questions[safe: index]
         delegate?.didReceiveNextQuestion(question: question)
     }

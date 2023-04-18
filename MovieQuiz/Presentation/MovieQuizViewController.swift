@@ -9,9 +9,13 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     private var alertPresenter: ResultAlertPresenter?
     private var statisticService: StatisticService?
     
+    private var buttonsInteractionEnabled: Bool = true
+    
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var counterLabel: UILabel!
+    @IBOutlet weak var yesButton: UIButton!
+    @IBOutlet weak var noButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -24,6 +28,10 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         statisticService = StatisticServiceImplementation()
         
         questionFactory?.requestNextQuestion()
+    }
+    
+    override var preferredStatusBarStyle: UIStatusBarStyle {
+        return .lightContent
     }
     
     // MARK: - QuestionFactoryDelegate
@@ -39,13 +47,13 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     }
     
     @IBAction private func yesButtonClicked(_ sender: UIButton) {
-        guard let currentQuestion = currentQuestion else { return }
+        guard buttonsInteractionEnabled, let currentQuestion = currentQuestion else { return }
         let givenAnswer = true
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
     
     @IBAction private func noButtonClicked(_ sender: UIButton) {
-        guard let currentQuestion = currentQuestion else { return }
+        guard buttonsInteractionEnabled, let currentQuestion = currentQuestion else { return }
         let givenAnswer = false
         showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
@@ -56,6 +64,9 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         counterLabel.text = step.questionNumber
         
         imageView.layer.borderWidth = 0
+        
+        yesButton.isUserInteractionEnabled = true
+        noButton.isUserInteractionEnabled = true
     }
     
     private func show(quiz result: QuizResultsViewModel) {
@@ -84,6 +95,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     }
     
     private func showAnswerResult(isCorrect: Bool) {
+        buttonsInteractionEnabled = false
+
         if isCorrect {
             correctAnswers += 1
         }
@@ -100,6 +113,9 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     }
     
     private func showNextQuestionOrResults() {
+        yesButton.isUserInteractionEnabled = false
+        noButton.isUserInteractionEnabled = false
+        
         if currentQuestionIndex == questionsAmount - 1 {
             guard let statisticService = statisticService else { return }
             
@@ -123,6 +139,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
             
             questionFactory?.requestNextQuestion()
         }
+        
+        buttonsInteractionEnabled = true
     }
 }
 

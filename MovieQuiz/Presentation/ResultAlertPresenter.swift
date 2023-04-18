@@ -8,7 +8,7 @@
 import Foundation
 import UIKit
 
-class ResultAlertPresenter {
+final class ResultAlertPresenter {
     private weak var delegate: ResultAlertPresenterDelegate?
     
     init(delegate: ResultAlertPresenterDelegate) {
@@ -26,6 +26,11 @@ class ResultAlertPresenter {
         
         alert.addAction(action)
         
-        viewController.present(alert, animated: true, completion: nil)
+        let container = AlertContainerViewController(alertController: alert)
+        container.modalPresentationStyle = .overCurrentContext
+        container.modalTransitionStyle = .crossDissolve
+                
+        viewController.present(container, animated: true, completion: nil)
+        //alert.view.superview?.subviews.first?.backgroundColor = UIColor.ypBackground
     }
 }
