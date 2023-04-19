@@ -14,8 +14,8 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
     @IBOutlet private weak var imageView: UIImageView!
     @IBOutlet private weak var textLabel: UILabel!
     @IBOutlet private weak var counterLabel: UILabel!
-    @IBOutlet weak var yesButton: UIButton!
-    @IBOutlet weak var noButton: UIButton!
+    @IBOutlet private weak var yesButton: UIButton!
+    @IBOutlet private weak var noButton: UIButton!
     
     // MARK: - Lifecycle
     override func viewDidLoad() {
@@ -44,18 +44,6 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         DispatchQueue.main.async { [weak self] in
             self?.show(quiz: viewModel)
         }
-    }
-    
-    @IBAction private func yesButtonClicked(_ sender: UIButton) {
-        guard buttonsInteractionEnabled, let currentQuestion = currentQuestion else { return }
-        let givenAnswer = true
-        showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
-    }
-    
-    @IBAction private func noButtonClicked(_ sender: UIButton) {
-        guard buttonsInteractionEnabled, let currentQuestion = currentQuestion else { return }
-        let givenAnswer = false
-        showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
     
     private func show(quiz step: QuizStepViewModel) {
@@ -119,14 +107,17 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         if currentQuestionIndex == questionsAmount - 1 {
             guard let statisticService = statisticService else { return }
             
-            statisticService.store(correct: correctAnswers, total: questionsAmount)
             let bestResult = statisticService.bestGame
-            let bestResultText = "Рекорд: \(bestResult.correct)/\(bestResult.total) (\(bestResult.date.dateTimeString))"
-            let gamesAmount = "Количество сыгранных квизов: \(statisticService.gamesCount)"
-            let accuracy = "Средняя точность: \(String(format: "%.2f", statisticService.totalAccuracy*100))%"
-            let currentResult = "Ваш результат: \(correctAnswers)/10"
-            let text = "\(currentResult)\n\(gamesAmount)\n\(bestResultText)\n\(accuracy)"
             
+            statisticService.store(correct: correctAnswers, total: questionsAmount)
+
+            let text = """
+                Ваш результат: \(correctAnswers)/10
+                Количество сыгранных квизов: \(statisticService.gamesCount)
+                Рекорд: \(bestResult.correct)/\(bestResult.total) (\(bestResult.date.dateTimeString))
+                Средняя точность: \(String(format: "%.2f", statisticService.totalAccuracy*100))%
+            """
+
             let viewModel = QuizResultsViewModel(
                 title: "Этот раунд окончен!",
                 text: text,
@@ -141,6 +132,18 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         }
         
         buttonsInteractionEnabled = true
+    }
+    
+    @IBAction private func yesButtonClicked(_ sender: UIButton) {
+        guard buttonsInteractionEnabled, let currentQuestion = currentQuestion else { return }
+        let givenAnswer = true
+        showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
+    }
+    
+    @IBAction private func noButtonClicked(_ sender: UIButton) {
+        guard buttonsInteractionEnabled, let currentQuestion = currentQuestion else { return }
+        let givenAnswer = false
+        showAnswerResult(isCorrect: givenAnswer == currentQuestion.correctAnswer)
     }
 }
 

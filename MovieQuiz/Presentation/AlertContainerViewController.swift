@@ -8,7 +8,7 @@
 import UIKit
 
 final class AlertContainerViewController: UIViewController {
-    let alertController: UIAlertController
+    private let alertController: UIAlertController
     
     init(alertController: UIAlertController) {
         self.alertController = alertController

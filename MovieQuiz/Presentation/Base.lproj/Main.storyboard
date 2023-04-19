@@ -122,7 +122,7 @@
                             </stackView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
-                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="backgroundColor" name="YP Black"/>
                         <constraints>
                             <constraint firstItem="iBo-mE-JOl" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="7uK-ID-1bf"/>
                             <constraint firstItem="iBo-mE-JOl" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="ASp-QS-K5p"/>
