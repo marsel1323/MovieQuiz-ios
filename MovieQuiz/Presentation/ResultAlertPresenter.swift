@@ -30,6 +30,5 @@ final class ResultAlertPresenter {
         container.modalTransitionStyle = .crossDissolve
                 
         viewController.present(container, animated: true, completion: nil)
-        //alert.view.superview?.subviews.first?.backgroundColor = UIColor.ypBackground
     }
 }

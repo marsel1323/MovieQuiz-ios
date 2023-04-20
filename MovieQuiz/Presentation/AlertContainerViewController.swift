@@ -22,7 +22,7 @@ final class AlertContainerViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        view.backgroundColor = UIColor.ypBackground//.withAlphaComponent(0.5)
+        view.backgroundColor = UIColor.ypBackground
         addChild(alertController)
         alertController.view.autoresizingMask = [.flexibleWidth, .flexibleHeight]
         alertController.view.frame = view.bounds
