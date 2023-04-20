@@ -59,7 +59,7 @@ final class StatisticServiceImplementation: StatisticService {
     func store(correct count: Int, total amount: Int) {
         let newRecord = GameRecord(correct: count, total: amount, date: Date())
         let correct = Keys.correct.rawValue
-        let total = Keys.correct.rawValue
+        let total = Keys.total.rawValue
         
         if newRecord > bestGame {
             bestGame = newRecord
