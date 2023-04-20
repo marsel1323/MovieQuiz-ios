@@ -7,8 +7,20 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1710195429ED8A48005928A1 /* AlertModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710195329ED8A48005928A1 /* AlertModel.swift */; };
+		1710195629ED8AB0005928A1 /* ResultAlertPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710195529ED8AB0005928A1 /* ResultAlertPresenter.swift */; };
+		1710195829ED93CF005928A1 /* StatisticService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710195729ED93CF005928A1 /* StatisticService.swift */; };
+		1710195A29ED9683005928A1 /* GameRecord.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710195929ED9683005928A1 /* GameRecord.swift */; };
+		1710195C29EDA14E005928A1 /* ResultAlertPresenterDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1710195B29EDA14E005928A1 /* ResultAlertPresenterDelegate.swift */; };
+		171CE59E29EC033C003ECACE /* QuestionFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CE59D29EC033C003ECACE /* QuestionFactory.swift */; };
+		171CE5A129EC057A003ECACE /* QuizStepViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CE5A029EC057A003ECACE /* QuizStepViewModel.swift */; };
+		171CE5A329EC058A003ECACE /* QuizResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CE5A229EC058A003ECACE /* QuizResultsViewModel.swift */; };
+		171CE5A529EC0597003ECACE /* QuizQuestion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CE5A429EC0597003ECACE /* QuizQuestion.swift */; };
+		171CE5A729EC2082003ECACE /* QuestionFactoryProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CE5A629EC2082003ECACE /* QuestionFactoryProtocol.swift */; };
+		171CE5A929EC247A003ECACE /* QuestionFactoryDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 171CE5A829EC247A003ECACE /* QuestionFactoryDelegate.swift */; };
 		179142A729C6135D003871BA /* YS Display-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179142A529C612FC003871BA /* YS Display-Bold.ttf */; };
 		179142A829C61360003871BA /* YS Display-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 179142A629C612FD003871BA /* YS Display-Medium.ttf */; };
+		17BB241029EEAAB100DB871F /* AlertContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 17BB240F29EEAAB100DB871F /* AlertContainerViewController.swift */; };
 		AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABAB12831907B00B3E448 /* AppDelegate.swift */; };
 		AD1ABAB42831907B00B3E448 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABAB32831907B00B3E448 /* SceneDelegate.swift */; };
 		AD1ABAB62831907B00B3E448 /* MovieQuizViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AD1ABAB52831907B00B3E448 /* MovieQuizViewController.swift */; };
@@ -21,8 +33,20 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1710195329ED8A48005928A1 /* AlertModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertModel.swift; sourceTree = "<group>"; };
+		1710195529ED8AB0005928A1 /* ResultAlertPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAlertPresenter.swift; sourceTree = "<group>"; };
+		1710195729ED93CF005928A1 /* StatisticService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticService.swift; sourceTree = "<group>"; };
+		1710195929ED9683005928A1 /* GameRecord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameRecord.swift; sourceTree = "<group>"; };
+		1710195B29EDA14E005928A1 /* ResultAlertPresenterDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ResultAlertPresenterDelegate.swift; sourceTree = "<group>"; };
+		171CE59D29EC033C003ECACE /* QuestionFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFactory.swift; sourceTree = "<group>"; };
+		171CE5A029EC057A003ECACE /* QuizStepViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizStepViewModel.swift; sourceTree = "<group>"; };
+		171CE5A229EC058A003ECACE /* QuizResultsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizResultsViewModel.swift; sourceTree = "<group>"; };
+		171CE5A429EC0597003ECACE /* QuizQuestion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizQuestion.swift; sourceTree = "<group>"; };
+		171CE5A629EC2082003ECACE /* QuestionFactoryProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFactoryProtocol.swift; sourceTree = "<group>"; };
+		171CE5A829EC247A003ECACE /* QuestionFactoryDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuestionFactoryDelegate.swift; sourceTree = "<group>"; };
 		179142A529C612FC003871BA /* YS Display-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Bold.ttf"; sourceTree = "<group>"; };
 		179142A629C612FD003871BA /* YS Display-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "YS Display-Medium.ttf"; sourceTree = "<group>"; };
+		17BB240F29EEAAB100DB871F /* AlertContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertContainerViewController.swift; sourceTree = "<group>"; };
 		AD1ABAAE2831907B00B3E448 /* MovieQuiz.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MovieQuiz.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AD1ABAB12831907B00B3E448 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AD1ABAB32831907B00B3E448 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -64,10 +88,36 @@
 			path = "YS Display";
 			sourceTree = "<group>";
 		};
+		171CE59C29EC02DF003ECACE /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				171CE59D29EC033C003ECACE /* QuestionFactory.swift */,
+				171CE5A629EC2082003ECACE /* QuestionFactoryProtocol.swift */,
+				171CE5A829EC247A003ECACE /* QuestionFactoryDelegate.swift */,
+				1710195B29EDA14E005928A1 /* ResultAlertPresenterDelegate.swift */,
+				1710195729ED93CF005928A1 /* StatisticService.swift */,
+			);
+			path = Services;
+			sourceTree = "<group>";
+		};
+		171CE59F29EC0551003ECACE /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				171CE5A029EC057A003ECACE /* QuizStepViewModel.swift */,
+				171CE5A229EC058A003ECACE /* QuizResultsViewModel.swift */,
+				171CE5A429EC0597003ECACE /* QuizQuestion.swift */,
+				1710195329ED8A48005928A1 /* AlertModel.swift */,
+				1710195929ED9683005928A1 /* GameRecord.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
 		8F4738322848DE2A005DF65E /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
 				AD1ABAB52831907B00B3E448 /* MovieQuizViewController.swift */,
+				1710195529ED8AB0005928A1 /* ResultAlertPresenter.swift */,
+				17BB240F29EEAAB100DB871F /* AlertContainerViewController.swift */,
 				AD1ABAB72831907B00B3E448 /* Main.storyboard */,
 			);
 			path = Presentation;
@@ -103,8 +153,10 @@
 		AD1ABAB02831907B00B3E448 /* MovieQuiz */ = {
 			isa = PBXGroup;
 			children = (
+				171CE59F29EC0551003ECACE /* Models */,
 				8F4738322848DE2A005DF65E /* Presentation */,
 				ADF0CF75283FDAA10075F54D /* Helpers */,
+				171CE59C29EC02DF003ECACE /* Services */,
 				8F4738332848DE46005DF65E /* Resources */,
 				AD1ABAB12831907B00B3E448 /* AppDelegate.swift */,
 				AD1ABAB32831907B00B3E448 /* SceneDelegate.swift */,
@@ -197,10 +249,22 @@
 			buildActionMask = 2147483647;
 			files = (
 				AD5EE5DE284D7887003966EF /* UIColor+Extensions.swift in Sources */,
+				1710195629ED8AB0005928A1 /* ResultAlertPresenter.swift in Sources */,
+				17BB241029EEAAB100DB871F /* AlertContainerViewController.swift in Sources */,
+				1710195429ED8A48005928A1 /* AlertModel.swift in Sources */,
 				AD7AFA552836189F00399704 /* Array+Extensions.swift in Sources */,
+				1710195A29ED9683005928A1 /* GameRecord.swift in Sources */,
+				171CE5A729EC2082003ECACE /* QuestionFactoryProtocol.swift in Sources */,
+				171CE5A929EC247A003ECACE /* QuestionFactoryDelegate.swift in Sources */,
 				AD1ABAB62831907B00B3E448 /* MovieQuizViewController.swift in Sources */,
+				1710195829ED93CF005928A1 /* StatisticService.swift in Sources */,
+				171CE5A129EC057A003ECACE /* QuizStepViewModel.swift in Sources */,
+				171CE5A529EC0597003ECACE /* QuizQuestion.swift in Sources */,
+				171CE59E29EC033C003ECACE /* QuestionFactory.swift in Sources */,
 				AD77F5742857F8810062FB14 /* Date+Extensions.swift in Sources */,
 				AD1ABAB22831907B00B3E448 /* AppDelegate.swift in Sources */,
+				1710195C29EDA14E005928A1 /* ResultAlertPresenterDelegate.swift in Sources */,
+				171CE5A329EC058A003ECACE /* QuizResultsViewModel.swift in Sources */,
 				AD1ABAB42831907B00B3E448 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -354,6 +418,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
@@ -384,6 +449,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UIStatusBarStyle = "";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
