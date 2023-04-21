@@ -24,11 +24,7 @@ final class ResultAlertPresenter {
         }
         
         alert.addAction(action)
-        
-        let container = AlertContainerViewController(alertController: alert)
-        container.modalPresentationStyle = .overCurrentContext
-        container.modalTransitionStyle = .crossDissolve
                 
-        viewController.present(container, animated: true, completion: nil)
+        viewController.present(alert, animated: true, completion: nil)
     }
 }

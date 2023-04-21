@@ -118,9 +118,9 @@ final class MovieQuizViewController: UIViewController, QuestionFactoryDelegate, 
         if currentQuestionIndex == questionsAmount - 1 {
             guard let statisticService = statisticService else { return }
             
-            let bestResult = statisticService.bestGame
-            
             statisticService.store(correct: correctAnswers, total: questionsAmount)
+            
+            let bestResult = statisticService.bestGame
             
             let text = """
                 Ваш результат: \(correctAnswers)/10
